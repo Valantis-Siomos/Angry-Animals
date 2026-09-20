@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://d0vdrrct5mxwx"]
+
+[ext_resource type="Texture2D" uid="uid://bai0x0ppmf406" path="res://Assets/env/elementWood015.png" id="1_1ttyc"]
+[ext_resource type="Texture2D" uid="uid://cxdkesxo2ekhe" path="res://Assets/player/parrot.png" id="2_ajys1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(1075, 19)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jpjmo"]
+bounce = 0.37
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 39.012817
+
+[node name="TestRb" type="Node" unique_id=2073514401]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=206209571]
+position = Vector2(0, 631)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1846449714]
+position = Vector2(574.00006, 2.5)
+scale = Vector2(6.218182, 0.38571426)
+texture = ExtResource("1_1ttyc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=973713982]
+position = Vector2(592.5, 2.5)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="Bird" type="RigidBody2D" parent="." unique_id=1911955219]
+position = Vector2(518, 128)
+physics_material_override = SubResource("PhysicsMaterial_jpjmo")
+center_of_mass_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Bird" unique_id=1273372621]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_ajys1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bird" unique_id=184843746]
+shape = SubResource("CircleShape2D_xrivr")
