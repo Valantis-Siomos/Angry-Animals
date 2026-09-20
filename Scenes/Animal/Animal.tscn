@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://vva4gde1jin6" path="res://Assets/audio/kick_wood.ogg" id="2_lib84"]
 [ext_resource type="AudioStream" uid="uid://dmdyehs40fke2" path="res://Assets/audio/catapult.ogg" id="3_oryip"]
 [ext_resource type="AudioStream" uid="uid://dp4uvy32luyh1" path="res://Assets/audio/stretch2.ogg" id="4_x85cc"]
+[ext_resource type="Texture2D" uid="uid://b7jotya2almcv" path="res://Assets/items/arrow.png" id="6_x85cc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 19.0
@@ -38,8 +39,16 @@ dsasa"
 [node name="KickSound" type="AudioStreamPlayer2D" parent="." unique_id=1296230311]
 stream = ExtResource("2_lib84")
 
-[node name="LaunchSound2" type="AudioStreamPlayer2D" parent="." unique_id=917359775]
+[node name="LaunchSound" type="AudioStreamPlayer2D" parent="." unique_id=917359775]
 stream = ExtResource("3_oryip")
 
-[node name="StretchSound3" type="AudioStreamPlayer2D" parent="." unique_id=1281945551]
+[node name="StretchSound" type="AudioStreamPlayer2D" parent="." unique_id=1281945551]
 stream = ExtResource("4_x85cc")
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=389614647]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_x85cc")
+offset = Vector2(150, 0)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
