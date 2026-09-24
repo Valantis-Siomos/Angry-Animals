@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c084hoe1fxc4x" path="res://Assets/scene/colored_castle.png" id="1_jkri1"]
 [ext_resource type="PackedScene" uid="uid://d3d8k073apuom" path="res://Scenes/Animal/Animal.tscn" id="2_ap5w0"]
+[ext_resource type="PackedScene" uid="uid://cj6p62nfohqt1" path="res://Scenes/Water/Water.tscn" id="3_8kwwm"]
 
 [node name="LavelBase" type="Node" unique_id=2089939502]
 
@@ -12,3 +13,6 @@ texture = ExtResource("1_jkri1")
 
 [node name="Animal" parent="." unique_id=1396342062 instance=ExtResource("2_ap5w0")]
 position = Vector2(127, 354)
+
+[node name="Water" parent="." unique_id=963505033 instance=ExtResource("3_8kwwm")]
+position = Vector2(568, 647)
