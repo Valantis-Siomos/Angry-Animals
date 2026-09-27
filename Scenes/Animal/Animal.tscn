@@ -7,11 +7,15 @@
 [ext_resource type="AudioStream" uid="uid://dp4uvy32luyh1" path="res://Assets/audio/stretch2.ogg" id="4_x85cc"]
 [ext_resource type="Texture2D" uid="uid://b7jotya2almcv" path="res://Assets/items/arrow.png" id="6_x85cc"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gcd5s"]
+bounce = 0.25
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 19.0
 
 [node name="Animal" type="RigidBody2D" unique_id=1396342062]
 input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_gcd5s")
 freeze = true
 contact_monitor = true
 max_contacts_reported = 1
@@ -51,4 +55,6 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_x85cc")
 offset = Vector2(150, 0)
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]
