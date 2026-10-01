@@ -78,6 +78,7 @@ func start_release() -> void:
 	_is_dragging = false
 	freeze = false
 	apply_central_impulse(calculate_impulse())
+	SignalHub.emit_on_attempt_made()
 
 func scale_arrow() -> void:
 	var imp_len: float = calculate_impulse().length()

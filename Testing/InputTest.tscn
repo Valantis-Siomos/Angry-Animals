@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://btcn6i22as7ts"]
+
+[ext_resource type="Script" uid="uid://cll50ca3y7p0q" path="res://Testing/Parrot.gd" id="1_n8hsl"]
+[ext_resource type="Texture2D" uid="uid://cxdkesxo2ekhe" path="res://Assets/player/parrot.png" id="1_sqtkd"]
+[ext_resource type="Script" uid="uid://d0gjai2skmh6m" path="res://Testing/Red.gd" id="3_vo84j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13qdw"]
+radius = 65.00769
+
+[node name="InputTest" type="Node" unique_id=31973829]
+
+[node name="Parrot" type="Area2D" parent="." unique_id=2000216948]
+position = Vector2(-356, 313)
+script = ExtResource("1_n8hsl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parrot" unique_id=1024985925]
+position = Vector2(935, 250)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_sqtkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parrot" unique_id=380090365]
+position = Vector2(934, 250)
+shape = SubResource("CircleShape2D_13qdw")
+
+[node name="Red" type="ColorRect" parent="." unique_id=2022413097]
+offset_left = 198.0
+offset_top = 62.0
+offset_right = 530.0
+offset_bottom = 368.0
+color = Color(1, 0, 0, 1)
+script = ExtResource("3_vo84j")
+
+[node name="Green" type="ColorRect" parent="Red" unique_id=284803225]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 119.0
+offset_right = 467.0
+offset_bottom = 425.0
+color = Color(0, 1, 0, 1)
+script = ExtResource("3_vo84j")
+
+[node name="Blue" type="ColorRect" parent="." unique_id=1040798846]
+offset_left = 266.0
+offset_top = 280.0
+offset_right = 598.0
+offset_bottom = 586.0
+color = Color(0, 0.2, 1, 0.4509804)
+script = ExtResource("3_vo84j")
