@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Angry animals"
-run/main_scene="uid://cjyk7jdgun0qy"
+run/main_scene="uid://d0bgahroshpx1"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="uid://b4dpbn63tljei"
 
